@@ -2,11 +2,8 @@ package com.Richard.portfolio.controller;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
@@ -14,10 +11,12 @@ import java.io.IOException;
 @RequestMapping("/api/resume")
 public class ResumeController {
 
-    @GetMapping(produces = MediaType.APPLICATION_PDF_VALUE)
-    public ResponseEntity<Resource> getResume() throws IOException {
+    @GetMapping("/download")
+    public ResponseEntity<Resource> downloadResume() throws IOException {
         Resource file = new ClassPathResource("static/resume.pdf");
-        return ResponseEntity.ok().contentType(MediaType.APPLICATION_PDF).body(file);
+        return ResponseEntity.ok()
+                .contentType(MediaType.APPLICATION_PDF)
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=Richard_Kwasi_Nyarko_Resume.pdf")
+                .body(file);
     }
 }
-
