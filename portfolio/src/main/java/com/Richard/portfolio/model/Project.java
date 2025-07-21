@@ -3,6 +3,8 @@ package com.Richard.portfolio.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -14,11 +16,20 @@ public class Project {
     private Long id;
 
     private String title;
+
+    @Column(length = 1000)
     private String description;
 
-    // Custom constructor
-    public Project(String title, String description) {
+    private String imageUrl;
+
+    @ElementCollection
+    private List<String> tags;
+
+    // Custom constructor for easier creation
+    public Project(String title, String description, String imageUrl, List<String> tags) {
         this.title = title;
         this.description = description;
+        this.imageUrl = imageUrl;
+        this.tags = tags;
     }
 }
