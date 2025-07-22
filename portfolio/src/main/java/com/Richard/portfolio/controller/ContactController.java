@@ -22,7 +22,7 @@ public class ContactController {
         Message saved = messageRepository.save(message);
 
         mailService.sendMail(
-            "your-email@gmail.com",  // ⬅️ Your receiving Gmail address
+            "nyarkorichardkwasi@gmail.com",  // ⬅️ Your receiving Gmail address
             "New Contact Message from " + message.getName(),
             "<p><strong>Name:</strong> " + message.getName() + "</p>" +
             "<p><strong>Email:</strong> " + message.getEmail() + "</p>" +
