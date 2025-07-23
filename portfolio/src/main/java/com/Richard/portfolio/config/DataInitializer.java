@@ -21,7 +21,7 @@ public class DataInitializer {
             projectRepository.save(new Project(
                     "Portfolio Website",
                     "A fullstack React + Spring Boot site showcasing my skills.",
-                    "https://images.unsplash.com/photo-1581090700227-1b5f9c0690e2?auto=format&fit=crop&w=600&q=80",
+                    "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/249985950/original/8a336252da216a3efa5e2ac3f7fc878049c23864/make-a-modern-responsive-website.png",
                     Arrays.asList("React", "Spring Boot", "Fullstack")
             ));
 
