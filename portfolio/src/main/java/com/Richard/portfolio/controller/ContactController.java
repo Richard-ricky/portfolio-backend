@@ -26,7 +26,8 @@ public class ContactController {
             "New Contact Message from " + message.getName(),
             "<p><strong>Name:</strong> " + message.getName() + "</p>" +
             "<p><strong>Email:</strong> " + message.getEmail() + "</p>" +
-            "<p><strong>Message:</strong><br/>" + message.getContent() + "</p>"
+            "<p><strong>Message:</strong><br/>" + message.getMessage()
+ + "</p>"
         );
 
         return saved;

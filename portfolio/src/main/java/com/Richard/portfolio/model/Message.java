@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Data // ✅ Lombok generates getters/setters including getContent()
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Message {
@@ -15,6 +15,7 @@ public class Message {
 
     private String name;
     private String email;
-    
-    private String content; // ✅ THIS field is needed for getContent()
+
+    @Column(columnDefinition = "TEXT")
+    private String message; // ✅ Match frontend form field
 }
