@@ -17,25 +17,25 @@ public class DataInitializer {
             // ✅ Clear existing records
             projectRepository.deleteAll();
 
-            // ✅ Insert new projects with imageUrl and tags
+            // ✅ Insert new projects with realistic imageUrl and tags
             projectRepository.save(new Project(
                     "Portfolio Website",
                     "A fullstack React + Spring Boot site showcasing my skills.",
-                    "https://cdn-icons-png.flaticon.com/512/1006/1006771.png",
+                    "https://images.unsplash.com/photo-1581090700227-1b5f9c0690e2?auto=format&fit=crop&w=600&q=80",
                     Arrays.asList("React", "Spring Boot", "Fullstack")
             ));
 
             projectRepository.save(new Project(
                     "Task Tracker",
                     "A minimalist app to manage daily tasks efficiently.",
-                    "https://cdn-icons-png.flaticon.com/512/2919/2919600.png",
+                    "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=600&q=80",
                     Arrays.asList("Java", "Spring", "CRUD")
             ));
 
             projectRepository.save(new Project(
                     "Weather App",
                     "A real-time weather app using the OpenWeatherMap API.",
-                    "https://cdn-icons-png.flaticon.com/512/869/869869.png",
+                    "https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=600&q=80",
                     Arrays.asList("API", "JavaScript", "Weather")
             ));
         };
